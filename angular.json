@@ -134,6 +134,41 @@
           }
         }
       }
+    },
+    "ngx-authorization": {
+      "root": "projects/ngx-authorization",
+      "sourceRoot": "projects/ngx-authorization/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-authorization/tsconfig.lib.json",
+            "project": "projects/ngx-authorization/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-authorization/src/test.ts",
+            "tsConfig": "projects/ngx-authorization/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-authorization/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-authorization/tsconfig.lib.json",
+              "projects/ngx-authorization/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-security-package"

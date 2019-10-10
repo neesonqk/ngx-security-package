@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-authorization": [
+        "dist/ngx-authorization"
+      ],
+      "ngx-authorization/*": [
+        "dist/ngx-authorization/*"
+      ]
+    }
   }
 }
